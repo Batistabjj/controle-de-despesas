@@ -36,6 +36,10 @@ const addTransactionIntoDOM = transaction => {
   transactionsUl.append(li)
 }
 
+
+
+
+
 const updateBalanceValues = () => {
   const transactionsAmounts = transactions
     .map(transaction => transaction.amount)
@@ -94,21 +98,21 @@ const handleFormSubit = event => {
 
   const isSomeInputEmpty = transactionName === '' || transactionAmount === ''
 
-  if (isSomeInputEmpty ) {
+  if (isSomeInputEmpty) {
     alert('Por favor preencha tanto o nome quanto o valor da transaçao')
     return
   }
 
 
-  addToTransactionsArray(transactionName, transactionAmount )
+  addToTransactionsArray(transactionName, transactionAmount)
   init()
   updateLocalStorage()
   cleanInputs()
- 
 
 
 
- 
+
+
 
 }
 
